@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>TDTU - Add Users</title>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/emoji/452/cat-emoji.png" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="https://img.icons8.com/bubbles/2x/cat.png" alt="" />
+                <h3>TDTU Community</h3>
+                <p>Please input your information</p>
+                <form action="/dashboard" method="GET">
+                    <input type="submit" name="" value="Back" /><br/>
+                </form>
+            </div>
+            <div class="col-md-9 register-right">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <form action="/signup" method="POST">
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="First Name" value="" name="fname" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Last Name" value="" name="lname" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password" value="" name="password" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Confirm Password" value="" name="password2" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Username" value="" name="username" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="majoy" class="form-control" placeholder="Majoy" value="" />
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Sign up</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

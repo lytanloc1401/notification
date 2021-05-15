@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%=user.displayName%>
+    </title>
+    <link rel="icon" type="image/png" href="/public/image/logo icon/logo_icon.png" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <%- include('partials/header') -%>
+        <link rel="icon" type="image/png" href="<%=user.image%>" />
+</head>
+
+
+<body>
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="<%=user.image%>" alt="" />
+                <h3>TDTU Community</h3>
+                <p>Your Profile</p>
+                <i>Full Name: <%=user.displayName%> </i>
+                <br>
+                <i>Class: <%=user.class%> </i>
+                <br>
+                <i>Majoy: <%=user.majoy%> </i>
+
+                <form action="/profile/<%=user.email%>" method="GET">
+                    <input type="submit" name="" value="Profile" /><br/>
+                </form>
+            </div>
+
+            <div class="col-md-9 register-right">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <form action="/editprofile" method="POST">
+                            <div class="row register-form">
+                                <div class="col-md-10">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="First Name" name="fname" value="<%=user.firstName%>" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Last Name" name="lname" value="<%=user.lastName%>" />
+                                    </div>
+                                    <div class=" form-group ">
+                                        <input type="text" class="form-control" placeholder="Class" name="class" value="<%=user.class%>" />
+                                    </div>
+                                    <div class="form-group ">
+                                        <input type="text" class="form-control" placeholder="Majoy" name="majoy" value="<%=user.majoy%>" />
+                                    </div>
+                                    <div class="form-group ">
+                                        <input type="text" class="form-control" placeholder="Link Avatar" name="image" value="<%=user.image%>" />
+                                    </div>
+                                    <button type="submit " class="btn btn-primary ">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
